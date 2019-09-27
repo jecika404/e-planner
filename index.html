@@ -1,0 +1,220 @@
+
+ <!doctype html>
+ <html lang="en">
+   <head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <link rel="stylesheet" href="assets/style/bootstrap.min.css">
+     <link rel="stylesheet" href="assets/style/style.css">
+     <!-- Animate -->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <!-- Font Awsome -->
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+     <link href="https://fonts.googleapis.com/css?family=Chilanka|Pacifico&display=swap" rel="stylesheet">
+     <title>E Planner</title>
+   </head>
+ <body>
+                                <!--HEADER SECTION-->
+<!--Nav-->   
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <!-- <a class="navbar-brand" href="#"><i class="fa fa-bookmark-o"></i>E-planner</a> -->
+    <button class="navbar-toggler bg-dark" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="index.html">Home</a>
+            <a class="nav-item nav-link active" href="#">About <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="#">App Examples</a>
+            <a href="" class="nav-item nav-link" data-toggle="modal" data-target="#registerModal">Register</a>
+            <a href="" class="nav-item nav-link" data-toggle="modal" data-target="#loginModal">Login</a>
+            <!-- <a href="#" class="nav-item nav-link" id="logout">Log out</a> -->
+          </div>
+      </div>
+    </div>
+</nav>
+<!--Hero-->
+<div class="row">
+<div class="col-md-12 p-0">
+    <div class="bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9 col-sm-12">
+              <div class="card hero">
+                  <div class="card-header">
+                    <blockquote class="blockquote text-left">
+                        <p class="mb-0">"I am still learning."</p>
+                        <footer class="blockquote-footer"><cite title="Source Title">Michelangelo</cite></footer>
+                      </blockquote>
+                  </div>
+                  <div class="card-body">
+                    <h2 class="card-title">Bookmark. Notes. Reminders.</h2>
+                    <p class="card-text lead d-sm-none d-md-block d-none d-sm-block">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, eaque cumque? Harum laborum veniam temporibus reprehenderit nostrum corrupti voluptas libero nemo excepturi sequi labore alias, dolor omnis. Tenetur, harum veritatis.</p>
+                    <a href="#" class="btn btn-lg">App Examples</a>
+                    <a href="#" class="btn btn-lg" data-toggle="modal" data-target="#registerModal">Register Now</a>
+                  </div>
+                </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div> 
+
+                                    <!--ABOUT SECTION-->
+<!--Notes Card-->
+<div class="row">
+  <div class="col-md-8" data-aos="fade-right">
+      <div class="card mb-3 note">
+          <div class="row no-gutters">
+            <div class="col-md-6">
+              <img src="assets/img/about.jpg" class="card-img" alt="...">
+            </div>
+            <div class="col-md-6">
+              <div class="card-body">
+                <h5 class="card-title">Notes</h5>
+                <p class="card-text lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam aspernatur minus sunt incidunt magni nisi perspiciatis vel tempore quo sint dignissimos, unde itaque voluptate ratione eaque fugit. Odit, distinctio deserunt.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+<!--Bookmark Card-->
+<div class="row">
+  <div class="col-md-8" data-aos="fade-left">
+      <div class="card mb-3 bookmark">
+          <div class="row no-gutters">
+            <div class="col-md-6 col-sm-12 col-lg-6">
+              <img src="assets/img/bookmark.jpg" class="card-img" alt="...">
+            </div>
+            <div class="col-md-6 col-sm-12 col-lg-6">
+              <div class="card-body">
+                <h5 class="card-title">Bookmark</h5>
+                <p class="card-text lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam aspernatur minus sunt incidunt magni nisi perspiciatis vel tempore quo sint dignissimos, unde itaque voluptate ratione eaque fugit. Odit, distinctio deserunt.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+<!--Reminders Card-->
+<div class="row">
+  <div class="col-md-8" data-aos="fade-right">
+      <div class="card mb-3 reminders">
+          <div class="row no-gutters">
+            <div class="col-md-6 col-sm-12 col-lg-6">
+              <img src="assets/img/reminders.jpg" class="card-img" alt="...">
+            </div>
+            <div class="col-md-6 col-sm-12 col-lg-6">
+              <div class="card-body">
+                <h5 class="card-title">Reminders</h5>
+                <p class="card-text lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam aspernatur minus sunt incidunt magni nisi perspiciatis vel tempore quo sint dignissimos, unde itaque voluptate ratione eaque fugit. Odit, distinctio deserunt.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+                              <!--FOOTER SECTION-->
+
+<!--Footer-->
+<footer>
+  <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+              <div class="card card-footer">
+                  <div class="card-body">
+                    <h2 class="card-title">Be Creative. Be Creative. Be Inspired</h2>
+                    <p class="card-text">Copyright&copy;2019.All Rights reserved</p>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div> 
+    </div>
+</footer>
+
+                                <!--MODALS SECTION-->
+
+<!--Register Modal-->
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="register"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Register Now</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="profile.html" id="register-form">  
+        <div class="modal-body mx-3">
+            <div class="form-group md-form mb-5">
+                <label for="defaultForm-email">Your email</label>
+                <input type="text" id="register-email" class="form-control">
+            </div>
+            <div class="form-group md-form mb-5">
+                <label for="defaultForm-email">Password</label>
+                <input type="text" id="register-pass" class="form-control">
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <input type="submit" class="btn btn-primary" value="Register">
+          </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!--LogIn Modal-->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Log In</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="form-group md-form mb-5">
+            <label for="defaultForm-email">Your email</label>
+            <input type="email" id="" class="form-control">
+        </div>
+        <div class="form-group md-form mb-5">
+            <label for="defaultForm-email">Password</label>
+            <input type="password" id="" class="form-control">
+        </div>
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-primary">Register</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 400,
+        duration: 1000
+      });
+    </script>   
+    
+    
+  </body>
+</html>

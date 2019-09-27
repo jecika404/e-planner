@@ -1,0 +1,37 @@
+@import "variables";
+
+nav {
+    background-color: $primaryColor;
+    height: 10vh;
+    .navbar-brand {
+        font-size: 30px;
+        color: #fff;
+        font-family: 'Chilanka', cursive;
+        
+        i {
+            font-size: 30px;
+            color: #fff;
+           
+        }
+    }
+    .collapse{
+        float: right;
+        a {
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 20px;
+            height: 10vh;
+            padding: 15px;
+            
+        }
+        .nav-link {
+            text-align: center;
+            height: 10vh;
+            &:hover {background-color: $seconderyColor;}
+        }
+    }   
+}
+
+
+
+

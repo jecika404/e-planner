@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+     <!-- Required meta tags -->
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <!--Bootstrap-->
+     <link rel="stylesheet" href="assets/style/bootstrap.min.css">
+     <!--Custom CSS-->
+     <link rel="stylesheet" href="assets/style/style.css">
+     <!-- Animate -->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <!-- Font Awsome -->
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+     <!--Google Fonts-->
+     <link href="https://fonts.googleapis.com/css?family=Chilanka|Pacifico&display=swap" rel="stylesheet">
+     <!--Title-->
+     <title>E Planner</title>
+</head>
+<body>
+<!--Nav-->
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0">
+    <div class="pos-f-t navbarTop">
+            <div class="collapse" id="welcomeUser">
+                <div class="container">    
+                    <h4 class="text-white">
+                        <p class="text-white mb-2" id="time"></p>
+                        <span id="greet"></span> 
+                        <span  id="name" contenteditable="true"></span>
+                    </h4>
+                    <p class="text-white" >What is your focus for today?<span contenteditable="true" id="focus"></span></p>
+                </div>
+            </div>
+            <!--Navbar-->
+            <nav class="navbar navbar navbarTop">
+                <!--Collapse button for info-->
+                <div class="container">
+                    <button class="navbar-toggler burger" type="button" data-toggle="collapse" data-target="#welcomeUser" aria-controls="welcomeUser" aria-expanded="false" aria-label="Toggle navigation" data-aos="fade-right">
+                            <span class="navbar-toggler-icon"><i class="fa fa-info text-white"></i></span>
+                    </button>
+                    <!--Nav button-->
+                    <!-- <div data-aos="fade-left">
+                        <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn navbarBtn">
+                                <i class="fa fa-home"></i>
+                        </button>
+                        <button type="button" data-toggle="modal" data-target="#user-modal" class="btn navbarBtn">
+                                <i class="fa fa-user"></i>
+                        </button>
+                        <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn navbarBtn">
+                                <i class="fa fa-cogs"></i>
+                        </button>
+                        <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn navbarBtn">
+                                <i class="fa fa-sign-out"></i>
+                        </button>
+                    </div> -->
+                </div>  
+            </nav>
+        </div>
+    </div>
+</div>     
+<!-- Main -->
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 p-0 main">
+        <div class="container">
+            <!-- Tabs -->
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#tabs-task">Task</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#tabs-notes">Notes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#tabs-bookmarker">Bookmarker</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <!-- Tasks -->
+                <div id="tabs-task" class="container tab-pane active">
+                    <div class="card tabs">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Today Task</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <div class="card-body alert-div">
+                            <form action="#" id="task-form">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control filter" id="taskTitle" aria-describedby="addTask" placeholder="&#xf040; Enter Task">
+                                        </div> 
+                                    </div>
+                                     <div class="col-md-6">
+                                        <input type="submit" class="btn btn-secondary" value="Add Task">
+                                    </div> 
+                                </div>
+                            </form>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table class="table table-striped">
+                                    <tbody id="task-list" class="pl-5">
+                                        <!--Output Tasks / JavaScript-->
+                                    </tbody>      
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Notes-->
+                <div id="tabs-notes" class="container tab-pane fade">
+                    <div class="card tabs" id="minimizeNotesForm">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" data-toggle="tooltip" data-placement="top" title="Maximize or Minimize the form">Notes</li>
+                        </ul>
+                    </div>
+                    <div class="card hide" id="hide-form-note">
+                        <div class="card-body alert-div-note">
+                            <form action="#" id="note-form">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control filter" id="noteTitle" aria-describedby="addNote" placeholder="&#xf040; Enter Title Note">      
+                                        </div>
+                                    </div>
+                                </div>     
+                                <div class="row">   
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                                <textarea id="noteContent" cols="30" rows="4" class="form-control rounded-1 filter" placeholder="&#xf24a; Enter Content Note"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="submit" class="btn btn-block btn-secondary" value="Add Note"> 
+                                        </div>
+                                    </div>  
+                                </div>
+                            </form>
+                        </div> 
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 mt-2">
+                            <form action="" id="formForSearchNote">
+                                <div class="form-group">
+                                        <input type="text" class="form-control filter" id="searchNotes" aria-describedby="searchNote" placeholder="&#xf002; Search Notes">      
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 mt-2" id="notes">
+                            <!--Output Notes / JavaScript-->
+                        </div>
+                    </div>  
+                </div>  
+                <!--Bookmarker-->
+                <div id="tabs-bookmarker" class="container tab-pane fade">
+                    <div class="card tabs" id="minimizeBookmarksForm">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" data-toggle="tooltip" data-placement="top" title="Maximize or Minimize the form">Bookmarker</li>
+                        </ul>
+                    </div>
+                    <div class="row" id="fill-form">
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12" id="hide-form-bookmarks" style="display: block;">
+                            <form action="#" id="bookmark-form">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control filter" id="bookmarkName" aria-describedby="addBookmarkTitle" placeholder="&#xf040; Enter Bookmark Title">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                                <input type="text" class="form-control filter" id="bookmarkUrl" aria-describedby="addUrl" placeholder="&#xf268; Enter URL ">      
+                                        </div>      
+                                    </div>          
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" class="btn btn-block btn-secondary" value="Add Bookmark"> 
+                                </div>                           
+                            </form>       
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                            <form action="#" id="formForSearchBookmark">
+                                <div class="form-group">
+                                    <input type="text" class="form-control filter" id="searchBoomark" aria-describedby="sreach" placeholder="&#xf002; Sreach Bookmark"> 
+                                </div> 
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 mt-2" id="bookmark-output">
+                                <!--Output Bookmraks / JavaScript-->
+                        </div>         
+                    </div>         
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- User Modal -->
+<div class="modal fade" id="user-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content  d-flex justify-content-center">
+            <div class="modal-header userTitle">
+                <h5 class="modal-title" >Profil</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body user">
+                <div class="card">
+                    <img class="card-img-top" src="assets/img/avatar.jpg" alt="avatar">
+                    <div class="card-body">
+                        <p class="card-text lead">
+                            Name: Jelena
+                            <br>
+                            Last Name: Karaulic
+                            <br>
+                            Status: Web Developer
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!--Data Formating-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js"></script>
+    <!--Firebase-->
+    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.6.1/firebase-firestore.js"></script>
+    <script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyAf0ValM5Ml_kvYHt3be38ZDB8kW5TbBO0",
+        authDomain: "eplanner-de5a1.firebaseapp.com",
+        databaseURL: "https://eplanner-de5a1.firebaseio.com",
+        projectId: "eplanner-de5a1",
+        storageBucket: "eplanner-de5a1.appspot.com",
+        messagingSenderId: "972903604907",
+        appId: "1:972903604907:web:14b70cf0c2a4cfb9f2cdee"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+    </script>
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <!--Bootstrap-->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Initialize Bootstrap functionality -->
+    <script>
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
+        
+        $(function () {
+          $('[data-toggle="popover"]').popover()
+        })
+    </script>
+    <!--Custom JS-->
+    <script src="assets/js/db.js"></script>
+    <script src="assets/js/class.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/greet.js"></script>
+    <!--AOS-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+    AOS.init({
+        offset: 400,
+        duration: 1000
+    });
+    </script>   
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+@import "nav";
+@import "profile";
+@import "variables";
+
+
+
+
+// Small devices
+@mixin xs {
+    @media (min-width: #{$screen-xs-min}) {
+        @content;
+    }
+ }
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+ }
+ 
+ // Medium devices
+ @mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+ }
+ 
+ // Large devices
+ @mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+ }
+ 
+ // Extra large devices
+ @mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+ }
+ body {
+     margin: 0;
+ }
+.register {
+    background-image: url("../img/register.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .card {
+        margin-top: 10%;
+        opacity: 0.9;
+        
+    }
+    .btn {
+        color: #fff;
+        background-color: $seconderyColor;
+        &:hover {background-color: $primaryColor;};
+    }
+    
+}
+
+.hero{
+    margin-top: 10%;
+    opacity: 0.8;
+    .btn {
+        background-color: $primaryColor;
+        color: #fff;
+    }
+    a {
+        text-decoration: none;
+        &:hover {background: $seconderyColor};
+    }
+    a:last-of-type{
+        background-color: $seconderyColor;  
+        color: #fff;
+        &:hover {background: $primaryColor;};
+    }
+ 
+}
+
+.card-title {
+    @media screen and (max-width: $screen-sm-min) {
+        font-size: 20px;
+    }
+    @media screen and (max-width: $screen-md-min) {
+        font-size: 30px;
+    }
+    @media screen and (max-width: $screen-sm-min) {
+        font-size: 20px;
+    } 
+        font-size: $heding;
+    
+}
+.bg {
+    
+    background-image: url("../img/hero.jpg");
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+
+.note,.bookmark,.reminders {
+    margin-top: 40px;
+    .card-title {
+        font-size: $heding;
+    } 
+    
+}
+footer {
+    
+    .footer {
+        background-image: url("../img/footer.jpg");
+        height: 40vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.9;
+         
+    }
+    .card-footer {
+        margin-top: 20px;
+        padding: 0;
+        text-align: center;
+        
+    }
+    .card-title {
+        font-size: 50px;
+        color: black;
+        opacity: 0.9;
+    }
+    .card-text {
+        color: black;
+        opacity: 0.9;
+    }
+}
+
+
+  
+
