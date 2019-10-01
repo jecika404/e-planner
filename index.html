@@ -15,7 +15,7 @@
      <!--Google Fonts-->
      <link href="https://fonts.googleapis.com/css?family=Chilanka|Pacifico&display=swap" rel="stylesheet">
      <!--Title-->
-     <title>E Planner</title>
+     <title>E-Planner</title>
 </head>
 <body>
 <!--Nav-->
@@ -39,21 +39,6 @@
                     <button class="navbar-toggler burger" type="button" data-toggle="collapse" data-target="#welcomeUser" aria-controls="welcomeUser" aria-expanded="false" aria-label="Toggle navigation" data-aos="fade-right">
                             <span class="navbar-toggler-icon"><i class="fa fa-info text-white"></i></span>
                     </button>
-                    <!--Nav button-->
-                    <!-- <div data-aos="fade-left">
-                        <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn navbarBtn">
-                                <i class="fa fa-home"></i>
-                        </button>
-                        <button type="button" data-toggle="modal" data-target="#user-modal" class="btn navbarBtn">
-                                <i class="fa fa-user"></i>
-                        </button>
-                        <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn navbarBtn">
-                                <i class="fa fa-cogs"></i>
-                        </button>
-                        <button type="button" data-toggle="modal" data-target="#exampleModal" class="btn navbarBtn">
-                                <i class="fa fa-sign-out"></i>
-                        </button>
-                    </div> -->
                 </div>  
             </nav>
         </div>
@@ -207,34 +192,6 @@
 </div>
 
 
-<!-- User Modal -->
-<div class="modal fade" id="user-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content  d-flex justify-content-center">
-            <div class="modal-header userTitle">
-                <h5 class="modal-title" >Profil</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body user">
-                <div class="card">
-                    <img class="card-img-top" src="assets/img/avatar.jpg" alt="avatar">
-                    <div class="card-body">
-                        <p class="card-text lead">
-                            Name: Jelena
-                            <br>
-                            Last Name: Karaulic
-                            <br>
-                            Status: Web Developer
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
     <!--Data Formating-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js"></script>
     <!--Firebase-->
@@ -271,8 +228,8 @@
         })
     </script>
     <!--Custom JS-->
-    <script src="assets/js/db.js"></script>
     <script src="assets/js/class.js"></script>
+    <script src="assets/js/collection.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/greet.js"></script>
     <!--AOS-->
@@ -283,6 +240,5 @@
         duration: 1000
     });
     </script>   
-
 </body>
 </html>

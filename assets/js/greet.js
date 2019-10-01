@@ -12,7 +12,7 @@ function showTime() {
     sec = today.getSeconds();
 
     // set AM or PM
-    const amPm = hour >= 12 ? 'PM' : 'AM';
+    const amPm = hour <= 12 ? 'PM' : 'AM';
     // 12hr Format
     hour = hour % 12 || 12;
     //Output Time
@@ -26,9 +26,9 @@ function addZero(n) {
 function welcome() {
     let today = new Date(),
     hour = today.getHours();
-        if(hour < 12) {
+        if(hour > 12) {
             greet.textContent = 'Good Morning';
-        } else if(hour < 18) {
+        } else if(hour > 18) {
             greet.textContent = 'Good Afternoon';
         } else {
             greet.textContent = 'Good Evening';
