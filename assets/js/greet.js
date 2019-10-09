@@ -1,6 +1,5 @@
 //Greeting
 const time = document.querySelector('#time');
-const greet = document.querySelector('#greet');
 const name = document.querySelector('#name');
 const focus = document.querySelector('#focus');
 
@@ -23,19 +22,6 @@ function showTime() {
 function addZero(n) {
     return (parseInt(n, 10) < 10 ? '0' : '') + n;
 }
-function welcome() {
-    let today = new Date(),
-    hour = today.getHours();
-        if(hour > 12) {
-            greet.textContent = 'Good Morning';
-        } else if(hour > 18) {
-            greet.textContent = 'Good Afternoon';
-        } else {
-            greet.textContent = 'Good Evening';
-        }
-}
-
-
 function setName(e) {
     if(e.type ===  'keypress') {
         if(e.which == 13 || e.keyCOde == 13) {
@@ -84,6 +70,5 @@ focus.addEventListener('blur', setFocus);
 
 // Run
 showTime();
-welcome();
 getFocus();
 getName();
