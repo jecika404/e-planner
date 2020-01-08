@@ -1,5 +1,5 @@
 # e-planner
 
-e-planner app done in vanilla JavaScript
+E-planner app done in vanilla JavaScript
 
-Demo: https://jecika404.github.io/e-planner/
+# Demo: https://jecika404.github.io/e-planner/
